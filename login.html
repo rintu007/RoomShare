@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	Login Page
+</title>
+
+	<link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+	<?php include_once "login.php"; ?>
+	<header><center><h1>ROOM SHARE</h1></center><hr></header>
+	<form action="login.php" method="post">
+	<div class="login">
+	<div id="log"><h3>LOGIN</h3></div>
+	<hr>
+	<form>
+	Email-ID:
+	<input type="text" name="email"><br>
+	<div id="pas">Password:
+	<input type="password" name="password"><br></div>
+	<div class="btn">
+		<input id="ls" type="submit" name="blogin" value="Login">
+		<input id="res" type="reset" name="reset" value="Reset">
+	</div>
+	</form>
+	</div>
+	
+	<div class="signup">
+	<div id="sign"><h3>SIGN UP</h3></div>
+	<hr>
+	<div id="i">I am:<br>
+	</div>
+	<div class="btn1">
+	<input type="radio" name="in" value="PWOF" >Person Without Flat
+	<input type="radio" name="in" value="PWF">Person With Flat
+	</div>
+	<div id=go>
+	<input id="ss" type="submit" name="goahead" value="Go Ahead"></div>
+	</div>
+	</div>
+	
+	</form>
+	
+	
+	<footer>Thank you for visiting us.</footer>
+	
+</body>
+</html>

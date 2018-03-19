@@ -1,0 +1,42 @@
+
+button
+{
+	border: none;
+    background-color: #006600;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+   	padding:1% 20%;
+	margin:3.5% 25%;
+}
+
+.info
+{
+
+	text-align:center;
+}
+
+#im
+{
+	width:150px;
+	height:150px;	
+	float:center;
+}
+
+#an
+{
+	padding:0 0 0 75%;
+}
+
+#pro
+{
+    width: 100%;
+    background-color: black;
+}
+#bar
+{
+    width: 10%;
+    height: 30px;
+    background-color: limegreen;
+    text-align: center;
+}

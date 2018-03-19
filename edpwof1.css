@@ -1,0 +1,102 @@
+body
+{
+	background-color: #392613; 
+	color:#000000;
+}
+/*#1affa3*/
+header
+{
+	font-size: 20px;
+	color:#ffffff;
+	background-color: #000;
+	margin-top: 0px;
+	padding-top: 1%;
+	pad
+}
+
+hr
+{
+	margin:0 0 0 0;
+	color:#ffffff;
+}
+#hobby
+{
+   height:100px;
+    width:200px;
+    overflow:scroll;
+}
+
+.login
+{
+	padding:3% 0 0 3%;
+	background-color: #fff; 
+	margin: 5% 20% 0 20%;
+	border:#000 solid 1px;
+}
+
+#tb
+{
+	padding: 16px;
+}
+
+input[type=email], input[type=password], input[type=text]
+{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing:	border-box;
+}
+.info
+{
+	padding:5% 0 0 20%;
+}
+
+#ok
+{
+	margin-left:70%;
+	border: none;
+    background-color: #006600;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+#sub
+{
+	float:center;
+	border: none;
+    background-color: #006600;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+   	padding:1% 20%;
+	margin:3.5% 25%;
+}
+
+#sub:hover
+{
+	opacity: 0.8;
+}
+
+#h
+{
+	font-size: 25px;
+	text-align: center;
+	background-color: #000000;
+	color: #ffffff;
+	margin-bottom: 5%;
+	padding: 14px 20px;
+
+}
+.info
+{
+	background-color: #ffffff;
+	margin:5% 20% 0 20%;
+	padding:5% 10% 0 10%;
+}
+#hobby
+{
+	width:80%;
+}

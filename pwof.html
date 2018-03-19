@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	PWOF Page
+</title>
+	<link rel="stylesheet" type="text/css" href="edpwof.css">
+	
+		<script type="text/javascript">
+		function yourfunction(radioid)
+		{
+			if(radioid == 3)
+			{
+				var f1=validate();
+				var f2=pcheck();
+				if(!f2)
+				{
+					document.getElementById("ok").style.display = "none";
+					window.alert("Enter correct password");
+					return false;
+
+				}
+				if(f1 && f2)
+				{
+					document.getElementById("ok").style.display = "";
+
+				}
+			}
+			else if(radioid == 5)
+			{
+				if(pcheck())
+				{
+					document.getElementById("ok").style.display = "";
+				}
+				else
+				{
+					document.getElementById("ok").style.display = "none";
+				}
+				
+			}
+		}
+		
+		function validate()
+		{
+			var inp = document.getElementById("emid");
+
+			
+			if (inp.value == "")
+			{
+				window.alert("Please enter your email-id.");
+				emid.focus();
+				return false;
+			}
+		
+			else if (inp.checkValidity() == false)
+			{
+				window.alert("Enter valid email");
+				emid.focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function pcheck()
+		{
+			if(document.getElementById("pass").value=="")
+			{				
+				document.getElementById("message").style.color="red";
+				document.getElementById("message").innerHTML="ENTER A VALID PASSWORD";	
+				return false;
+			}
+
+			else if(document.getElementById("pass").value==document.getElementById("cpass").value)
+			{
+				document.getElementById("message").style.color="green";
+				document.getElementById("message").innerHTML="MATCHING";
+				return true;
+			}
+			else
+			{
+				document.getElementById("message").style.color="red";
+				document.getElementById("message").innerHTML="NOT MATCHING";
+				return false;	
+			}
+		}	
+
+	</script>
+	
+</head>
+<body onkeyup="yourfunction(5)" background="pwofb1.jpg" style="background-size: cover;">
+
+	<header style="padding: 4px 0;opacity:0.85;"><center><h1>ROOM SHARE</h1></center></header>
+	
+		<div class="login" style="padding: 3% 5% 0 5%;opacity: 0.8;color: #fff;background-color: #363738;">
+		<div id="tb">
+	<form action="ev.php" method="post">
+	<span id="step1" style="font-size: 30px;color: #fff;">Step 1 :</span>
+	<br>
+	<div id="EnterL" style="font-size: 25px; background-color: #000;color: #fff;padding: 2% 0;margin-top: 2%;"><center>Enter your login details</center></div>
+	<br>
+	Email-ID:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input id="emid" type="email" name="email" placeholder="Enter email" required><br><br>
+	Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input id="pass" type="password" name="pass" placeholder="Enter password" onkeyup="pcheck()" required><br><br>
+	Confirm-Password:
+	<input id="cpass" type="password" name="cpass"  placeholder="Confirm password" onkeyup="pcheck()" required>
+	<br><span id="message"></span>
+	<br><br>
+		<input id="ok" type="submit" value="OK" style="display:none" onclick="yourfunction(3)">
+	</form>
+		</div>
+	</div>
+
+</body>
+</html>
+	
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+	PWF Page
+</title>
+	<style type="text/css">
+body
+{
+	 font-family: "Apple Chancery", cursive;
+	color:#000000;
+	font-size: 20px;
+background-attachment: fixed;
+
+}
+
+/*#1affa3         #392613  brown*/
+header
+{
+	font-size: 20px;
+	color:#ffffff;
+	background-color: #000000;
+	margin-top: 0px;
+	padding-top: 1%;
+}
+
+hr
+{
+	margin:2% 0 2% 0;
+	color:#ffffff;
+}
+#hobby
+{
+   height:100px;
+    width:200px;
+    overflow:scroll;
+}
+
+.login
+{
+	padding:3% 0 0 3%;
+	background-color: rgba(255,255,255,0.5); 
+	margin: 5% 20% 0 20%;
+	/*border:#000 solid 1px;*/
+	opacity:0.8;
+}
+
+#tb
+{
+	padding: 16px;
+}
+
+input[type=email], input[type=password], input[type=text]
+{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing:	border-box;
+}
+
+input[type=radio]
+{
+	height:20px;
+	width: 20px;
+}
+select {
+    font: inherit;
+}
+
+input[type=file]
+{
+	border: none;
+	background-color: red;
+	font-size: 17px;
+}
+
+.info
+{
+	padding:5% 0 0 20%;
+	opacity: 0.8;
+}
+
+#ok
+{
+	margin-left:70%;
+	border: none;
+    background-color: #006600;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+}
+
+#sub
+{
+	float:center;
+	border: none;
+    background-color: #006600;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+   	padding:1% 20%;
+	margin:3.5% 25%;
+}
+
+#sub:hover
+{
+	opacity: 0.8;
+}
+
+#h
+{
+	font-size: 25px;
+	text-align: center;
+	background-color: #000000;
+	color: #ffffff;
+	margin-bottom: 5%;
+	padding: 14px 20px;
+
+}
+.info
+{
+	background-color: #ffffff;
+	margin:5% 15% 0 15%;
+	padding:5% 10% 0 10%;
+}
+#hobby
+{
+	width:80%;
+}
+
+.tabcontent
+{
+	background-color: #ffffff;
+	margin:5% 12% 0 12%;
+	padding:5% 10% 0 10%;
+}
+	</style>
+	
+		<script type="text/javascript">
+		function yourfunction(radioid)
+		{
+			if(radioid == 3)
+			{
+				var f1=validate();
+				var f2=pcheck();
+				if(!f2)
+				{
+					document.getElementById("ok").style.display = "none";
+					window.alert("Enter correct password");
+					return false;
+
+				}
+				if(f1 && f2)
+				{
+					document.getElementById("ok").style.display = "";
+
+				}
+			}
+			else if(radioid == 5)
+			{
+				if(pcheck())
+				{
+					document.getElementById("ok").style.display = "";
+				}
+				else
+				{
+					document.getElementById("ok").style.display = "none";
+				}
+				
+			}
+		}
+		
+		function validate()
+		{
+			var inp = document.getElementById("emid");
+
+			
+			if (inp.value == "")
+			{
+				window.alert("Please enter your email-id.");
+				emid.focus();
+				return false;
+			}
+		
+			else if (inp.checkValidity() == false)
+			{
+				window.alert("Enter valid email");
+				emid.focus();
+				return false;
+			}
+			return true;
+		}
+		
+		function pcheck()
+		{
+			if(document.getElementById("pass").value=="")
+			{				
+				document.getElementById("message").style.color="red";
+				document.getElementById("message").innerHTML="ENTER A VALID PASSWORD";	
+				return false;
+			}
+
+			else if(document.getElementById("pass").value==document.getElementById("cpass").value)
+			{
+				document.getElementById("message").style.color="green";
+				document.getElementById("message").innerHTML="MATCHING";
+				return true;
+			}
+			else
+			{
+				document.getElementById("message").style.color="red";
+				document.getElementById("message").innerHTML="NOT MATCHING";
+				return false;	
+			}
+		}	
+
+	</script>
+	
+</head>
+<body onkeyup="yourfunction(5)" background="b3.jpg">
+
+	<header style="padding: 4px 0;opacity:0.7;"><center><h1>ROOM SHARE</h1></center></header>
+	<?php include_once "ev.php";?>
+	<div class="login" style="opacity: 0.8; background-color:  rgba(255,255,255,0.5);padding: 3% 5% 0 5%;">
+	<span id="step1" style="font-size: 30px;">Step 1 :</span>
+	<br>
+	<div id="EnterL" style="font-size: 25px; background-color: #000;color: #fff;padding: 2% 0;margin-top: 2%;"><center>Enter your login details</center></div>
+	<br>
+	<form action="ev1.php" method="post">
+	Email-ID:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input id="emid" type="email" name="email" placeholder="Enter email" required><br><br>
+	Password:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	<input id="pass" type="password" name="pass" placeholder="Enter password" onkeyup="pcheck()" required><br><br>
+	Confirm-Password:
+	<input id="cpass" type="password" name="cpass" placeholder="Confirm password" onkeyup="pcheck()" required>
+	<br>
+	<span id="message"></span>
+	<br><br>
+		<input id="ok" type="submit" value="OK" style="display:none" onclick="yourfunction(3)">
+		<br>
+		<br>
+	</form>
+	</div>
+	</div>
+</body>
+</html>	
+	
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="cardd.css">
+	<link rel="stylesheet" type="text/css" href="nav.css">
+  <link rel="stylesheet" type="text/css" href="edpwof.css">
+  <style type="text/css">
+  	.container {
+    padding: 16px;
+}
+    .modal 
+{
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+
+    background-color: #fefefe;
+    margin: 15% auto 15% auto; 
+    border: 1px solid #888;
+    width: 25%;
+}
+
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+
+}
+  </style>
+</head>
+<body background="pwfb.jpg">
+<header style="padding: 4px 0;opacity:0.7;"><center><h1>ROOM SHARE</h1></center></header>
+
+	<div class="topnav" id="myTopnav">
+  <a href="likepwf.php">Home</a>
+  <a href="likedpwf.php">Liked</a>
+  <a href="selectrm.html">Edit</a>
+  <a href="logout.php" style="float: right;">Logout</a>
+</div>
+
+	<button style="float: right;margin: 2% 1% 0 0;border:none; background-color: crimson;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;" onclick="document.getElementById('s1').style.display='block'">DELETE PROFILE</button>
+
+	<button style="float: right;margin: 2% 1% 0 0;border:none; background-color: crimson;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;" onclick="document.getElementById('s2').style.display='block'">DELETE ROOMMATE</button>
+
+  <form action="addroommate.php" method="post">
+  <button type="submit" style="float: right;margin: 2% 1% 0 0;border:none; background-color: crimson;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;">ADD ROOMMATE</button>
+  </form>
+
+<div id="s1" class="modal" style="display: none;">
+  
+
+  <form class="modal-content animate" action="deletepwf.php" method="post">
+   
+	<div class="container">
+	<center>Are you sure?
+	<hr>
+
+
+      <button type="submit" style="border:none; background-color: #6600cc;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;">Confirm</button>
+
+    
+      <button type="button" onclick="document.getElementById('s1').style.display='none'" class="cancelbtn" style="border:none; background-color:  crimson;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;">Cancel</button>
+      </center>
+      </div>
+  </form>
+</div>
+
+
+<div id="s2" class="modal" style="display: none;">
+  
+
+  <form class="modal-content animate" action="deleteroommate.php" method="post">
+   
+	<div class="container">
+	<center>Are you sure?
+	<hr>
+
+
+	<select name="delroommatenum" required>
+
+	<option value="1">R1</option>
+	<option value="2">R2</option>
+	<option value="3">R3</option>
+	<option value="4">R4</option>
+	<option value="5">R5</option>
+	<option value="6">R6</option>
+	<option value="7">R7</option>
+	<option value="8">R8</option>
+	<option value="9">R9</option>
+
+	</select><br><br>
+
+
+      <button type="submit" style="border:none; background-color: #6600cc;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;">Confirm</button>
+
+    
+      <button type="button" onclick="document.getElementById('s2').style.display='none'" class="cancelbtn" style="border:none; background-color:  crimson;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;">Cancel</button>
+      </center>
+      </div>
+  </form>
+</div>
+
+<div id="in" style="background-color: #fff;color:#000; margin:7% auto 0 auto; width: 60%;padding: 2% 5% 2% 5%; opacity: 0.85;" >
+<form action="pwfed.php" method="post">
+<center>Select roommate or flat:
+
+	<select name="roommatenum" required>
+
+	<option value="0">R1</option>
+	<option value="1">R2</option>
+	<option value="2">R3</option>
+	<option value="3">R4</option>
+	<option value="4">R5</option>
+	<option value="5">R6</option>
+	<option value="6">R7</option>
+	<option value="7">R8</option>
+	<option value="8">R9</option>
+	<option value="9">R10</option>
+	<option value="11">Flat</option>	
+
+	</select><br><br>
+
+	<input type="submit" name="sub" value="Next" style="border: none;background-color: #006600;color: white;padding: 14px 20px;cursor: pointer ;margin:3.5% 2% 10% 5%;"><br></center>
+</form>
+
+</div>
+
+</body>
+ <script>
+var modal1 = document.getElementById('s1');
+window.onclick = function(event) 
+{
+    if (event.target == modal1) 
+    {
+        modal1.style.display = "none";
+    }
+}
+</script>
+
+ <script>
+var modal2 = document.getElementById('s2');
+window.onclick = function(event) 
+{
+    if (event.target == modal2) 
+    {
+        modal2.style.display = "none";
+    }
+}
+</script>
+</html> 

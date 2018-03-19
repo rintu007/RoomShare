@@ -1,0 +1,38 @@
+DELIMITER //
+CREATE FUNCTION fullcheck(gender varchar(20),procpwfid INT,funcarea varchar(20)) RETURNS INT
+BEGIN
+DECLARE pwfgender varchar(20);
+DECLARE roommategender varchar(20);
+DECLARE rcount int;
+DECLARE farea varchar(20);
+
+SELECT area into farea FROM flat WHERE fid=(SELECT pwfflatid FROM pwf WHERE pwfid=procpwfid);
+
+IF(farea!=funcarea) THEN
+RETURN 0;
+END IF;
+
+IF(gender="Both") THEN
+RETURN 1;
+END IF;
+
+SELECT sex INTO pwfgender from pwf where pwfid=procpwfid;
+
+if(pwfgender!=gender) THEN
+RETURN 0;
+END IF;
+
+SELECT count(*) INTO rcount FROM roommate WHERE rpwfid=procpwfid;
+
+while(rcount!=0) DO
+SELECT sex INTO roommategender FROM roommate where rmno=rcount AND rpwfid=procpwfid;
+
+IF(roommategender!=gender) THEN
+RETURN 0;
+END IF;
+
+SET rcount=rcount-1;
+END WHILE;
+RETURN 1;
+END
+//

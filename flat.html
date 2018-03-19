@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Flat details</title>
+
+	<link rel="stylesheet" type="text/css" href="flat.css">
+</head>
+
+<body>
+	<header><h1><center>Flat details</h1></center></header>
+
+	
+	<div class="flat">
+		
+		<form name="flatform" method=post action="flat.php">
+		<h3><b><u>Rent:</h3></b></u>
+		<hr><br>
+		Total rent : 
+		<select name="rent" required>
+			<option value=""> - INR -</option>
+
+			<option value="2000">2000-2499</option>
+			<option value="2500">2500-2999</option>
+			<option value="3000">3000-3499</option>
+			<option value="3500">3500-3999</option>
+			<option value="4000">4000-4499</option>
+			<option value="4500">4500-4999</option>
+			<option value="5000">5000-5499</option>
+			<option value="5500">5500-5999</option>
+			<option value="6000">6000-6499</option>
+			<option value="6500">6500-6999</option>
+			<option value="7000">7000-7499</option>
+			<option value="7500">7500-7999</option>
+			<option value="8000">8000-8499</option>
+			<option value="8500">8500-8999</option>
+			<option value="9000">9000-9499</option>
+			<option value="9500">9500-9999</option>
+			<option value="10000">10000-10499</option>
+			<option value="10500">10500-10999</option>
+			<option value="11000">11000-11499</option>
+			<option value="11500">11500-11999</option>
+			<option value="12000">12000-12499</option>
+			<option value="12500">12500-12999</option>
+			<option value="13000">13000-13499</option>
+			<option value="13500">13500-13999</option>
+			<option value="14000">14000-14499</option>
+			<option value="14500">14500-14999</option>
+			<option value="15000">15000-15499</option>
+			<option value="15500">15500-15999</option>
+			<option value="16000">16000-16499</option>
+			<option value="16500">16500-16999</option>
+			<option value="17000">17000-17499</option>
+			<option value="17500">17500-17999</option>
+			<option value="18000">18000-18499</option>
+			<option value="18500">18500-18999</option>
+			<option value="19000">19000-19499</option>
+			<option value="19500">19500-19999</option>
+			<option value="20000">20000+</option>
+		</select><br><br>
+		
+		
+		Deposit : 
+		<input type="number" name="deposit" placeholder="Amount in INR" required><br><br>
+		
+		<h3><b><u>Address :</h3></b></u>
+		<hr><br>
+		Flat number : 
+		<input type="text" name="fno" required><br><br>
+		
+		Building name : 
+		<input type="text" name="bname" required><br><br>
+		
+		Street name : 
+		<input type="text" name="sname" required><br><br>
+		
+		Area : 
+		<select name="area" required>
+			<option name="a" value="Kothrud">Kothrud</option>
+			<option name="a" value="Koregaon Park">Koregaon Park</option>
+			<option name="a" value="Kalyaninagar">Kalyaninagar</option>
+			<option name="a" value="Pimpri">Pimpri</option>
+			<option name="a" value="Nigdi">Nigdi</option>
+			<option name="a" value="Bhosri">Bhosri</option>
+			<option name="a" value="Shivajinagar">Shivajinagar</option>
+		</select><br><br>
+
+		Zip :
+		<input type="number" name="zip" min="111111" max="999999"required>
+		<br><hr>
+
+		Size : 
+		<input type="number" name="size" placeholder="_square feet" required><br><br>
+
+		Rooms : 
+		<input type="number" name="rooms" placeholder="Bedrooms" required min="1" max="6"><br><br>
+
+		Furnishing : 
+		<input type="radio" name="fur" value="Yes" required>Yes
+		<input type="radio" name="fur" value="No" required>No<br><br>
+
+		AC : 
+		<input type="radio" name="ac" value="Yes" required>Yes
+		<input type="radio" name="ac" value="No" required>No<br><br>
+
+		Electric backup : 
+		<input type="radio" name="eb" value="Yes" required>Yes
+		<input type="radio" name="eb" value="No" required>No<br><br>
+
+		Water supply : 
+		<input type="radio" name="ws" value="Once a day" required>Once a day
+		<input type="radio" name="ws" value="Twice a day" required>Twice a day
+		<input type="radio" name="ws" value="All day" required>All day<br><br>
+
+		Availability :
+		<select name="availability">
+			<option name="avail" value="6 months">6 months</option>
+			<option name="avail" value="1 year">1 year</option>
+			<option name="avail" value="1.5 years">1.5 years</option>
+			<option name="avail" value="2 years or more">2 years or more</option>
+		</select><br><br>
+
+		Vacancy :
+		<select name="vacancy">
+			<option name="vac" value="1">1</option>
+			<option name="vac" value="2">2</option>
+			<option name="vac" value="3">3</option>
+			<option name="vac" value="4">4</option>
+			<option name="vac" value="5">5</option>
+			<option name="vac" value="6">6</option>
+			<option name="vac" value="7">7</option>
+			<option name="vac" value="8">8</option>
+			<option name="vac" value="9">9</option>
+		</select><br><br>
+		
+		<h3><b><u>Society:</h3></b></u>
+		<hr><br>
+		Security :
+		<input type="radio" name="sec" value="Yes" required>Yes
+		<input type="radio" name="sec" value="No" required>No<br><br>
+		
+		Parking :
+		<input type="radio" name="parking" value="Car" required>Car
+		<input type="radio" name="parking" value="Bike" required>Bike
+		<input type="radio" name="parking" value="None" required>None
+		<hr><br><br>
+		
+		<input type="submit" name="fsub" value="Submit">
+
+		</form>
+
+		
+</body>
+</html>

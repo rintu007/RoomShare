@@ -1,0 +1,17 @@
+DELIMITER //
+CREATE PROCEDURE getM()
+DECLARE total int;
+DECLARE c1 int;
+DECLARE c2 int;
+DECLARE c3 int;
+BEGIN
+
+SELECT count(*) AS c1 FROM pwf WHERE sex="Male";
+
+SELECT count(*) AS c2 FROM pwof WHERE sex="Male";
+
+SELECT count(*) AS c3 FROM pwof WHERE sex="Male";
+
+total
+
+//

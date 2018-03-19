@@ -1,0 +1,34 @@
+#hobby
+{
+   height:100px;
+    width:200px;
+    overflow:scroll;
+}
+
+.login
+{
+	padding:5% 0 0 20%;
+}
+
+.info
+{
+	padding:5% 0 0 20%;
+}
+
+#ok
+{
+	margin-left:60%;
+}
+
+#sub
+{
+	float:center;
+}
+
+#sub
+{
+	padding:0.5% 20%;
+	margin:3.5% 25%;
+}
+
+

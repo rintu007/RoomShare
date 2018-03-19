@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="nav.css">
+  <link rel="stylesheet" type="text/css" href="edpwof.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <style type="text/css">
+    body
+    {
+      background-size: cover;
+    }
+
+
+
+
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+
+
+
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  } 
+
+.rating > input:checked + label:hover, 
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+  </style>
+</head>
+<body background="pwofb.jpg">
+<header style="padding: 4px 0;opacity:0.7;"><center><h1>ROOM SHARE</h1></center></header>
+
+	<div class="topnav" id="myTopnav">
+  <a href="card.html">Home</a>
+  <a href="likepwof.php">Liked</a>
+  <a href="refer.html">Referals</a>
+  <a href="pwofed.php">Edit</a>
+  <a href="match.php">Matched Profiles</a>
+  <a href="logout.php" style="float: right;">Logout</a>
+    <a href="pwoffeedback.html" style="float: right;">Feedback</a>
+
+</div>
+
+
+<div id="in" style="background-color: #000;color:#fff; margin:7% auto 0 auto; width: 60%; height: 50%;padding: 2% 5% 2% 5%; opacity: 0.85;" >
+<form action="pwoffeedback.php" method="post">
+<center>
+<div style="background-color: #fff;color: #000;"><h2>Feedback Time!</h2></div>
+
+<div class="rating">
+    <input type="radio" id="star5" name="rating" value="5" required/><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4.5" required/><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" required/><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3.5" required/><label class="half" for="star3half" title="Okay - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" required/><label class = "full" for="star3" title="Okay - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2.5" required/><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" required/><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1.5" required/><label class="half" for="star1half" title="Hated it - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" required/><label class = "full" for="star1" title="Hated it - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="0.5" required/><label class="half" for="starhalf" title="Hated it - 0.5 stars"></label>
+</div>
+<br>
+<p>Your comments : <input type="text" name="comments" required></p>
+<input type="submit" name="sub" value="Next" style="border: none;background-color: #006600;color: white;padding: 14px 20px;cursor: pointer ;margin:3.5% 2% 10% 5%;"><br></center>
+</form>
+
+</div>
+	
+</body>
+</html> 

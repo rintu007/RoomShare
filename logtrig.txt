@@ -1,0 +1,19 @@
+CREATE TRIGGER inlogpwf 
+AFTER INSERT ON pwf
+FOR EACH ROW
+INSERT INTO logs VALUES (new.email,'Opened the account',NOW());
+
+CREATE TRIGGER dellogpwf 
+AFTER INSERT ON pwf
+FOR EACH ROW
+INSERT INTO logs VALUES (new.email,'Deleted the account',NOW());
+
+CREATE TRIGGER inlogpwof 
+AFTER INSERT ON pwof
+FOR EACH ROW
+INSERT INTO logs VALUES (new.email,'Opened the account',NOW());
+
+CREATE TRIGGER dellogpwof 
+AFTER INSERT ON pwof
+FOR EACH ROW
+INSERT INTO logs VALUES (new.email,'Deleted the account',NOW());

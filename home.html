@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="home.css">
+	<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <style type="text/css">
+
+
+*
+{
+  border: 0px solid black;
+}
+header
+{
+	color: white;
+}
+
+footer
+{
+	bottom: -200px;
+	position: absolute;
+	background-color: black;
+	color: white;
+	opacity:0.7;
+	width: 95%;
+	padding: 1% 2%;
+	margin-bottom: 2%;
+}
+#f1
+{
+	float:left;
+}
+#f2
+{
+	float: right;
+	width: 50%;
+	padding: 0.5% 5%;
+	text-align: center;
+
+}
+#maind
+{
+	position: relative;
+}
+body
+{
+	background-size: contain;
+	background-repeat: repeat;
+	background-position: fixed;
+}
+p
+{
+	font-size: 20px;
+}
+.l
+{
+	width:30%;
+	margin:1% 2% 10% 5%;
+	float:left;
+	background-color: white;
+	opacity:0.7;
+	padding: 1% 4%;
+}
+.mln
+{
+	margin-left: 5px;
+}
+.ln
+{
+	width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+
+.slideshow-container {
+  max-width: 1000px;
+  max-height:500px;
+  float:right;
+ margin-top:  2%;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+    .sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #154856;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s; 
+}
+
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav button {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background-color: #154856;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav button:hover, .offcanvas button:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+#lb
+{
+    border: none;
+    background-color: #6600cc;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
+
+#lb:hover
+{
+    opacity: 0.8;
+}
+input[type=submit]
+{
+  border: none;
+    background-color: #6600cc;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover
+{
+  opacity: 0.8;
+}
+
+  </style>
+
+  <script type="text/javascript">
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";/*home12.jpg*/
+}
+  </script>
+</head>
+
+<body background="b.jpg" style="background-repeat: no-repeat; background-size: cover;">
+<div id="maind">
+<header><center>Room Share</center></header>
+
+<div class="l">
+
+	<div class="mln" onclick="openNav()">
+	<div style="float: right; margin: 7px 100px;"><span style="font-size: 26px;">Lets get started!</span></div>
+	<div class="ln"></div>
+	<div class="ln"></div>
+	<div class="ln"></div>
+	</div>
+<p>Welcome to Room Share, your one stop to find the roommate you've always dreamed about!</p>
+
+
+<p>Simply <span onclick="document.getElementById('s1').style.display='block'"><u>login</u></span> with your username or <span onclick="document.getElementById('s2').style.display='block'"><u>signup</u></span> now!</p>
+
+<p>What's next? All you have to do to get a flat filled with cool roommates is to select the details you'd like about your prospective roommates and we shall show you the most compatible people fitting your criteria!</p>
+
+<p>And to get a roommate for your already amazing flat, we shall show you the prospective roommates that have liked you, your roommates, and your flat, and can't wait to move in with you!</p>
+
+<p>Connect with us on :</p>
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-google"></a>
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <button onclick="document.getElementById('s1').style.display='block'">Login</button>
+  <button onclick="document.getElementById('s2').style.display='block'">Sign Up</button>
+  <a href="report.html">Reports</a>
+</div>
+
+</div>
+
+ <div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="img1.jpg" style="width:100vh;height:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img21.jpg" style="width:100vh;height:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img31.jpg" style="width:100vh;height:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="img52.jpg" style="width:100vh;height:100%">
+  </div>
+
+  <div class="mySlides fade">
+    
+    <img src="img61.jpg" style="width:100vh;height:100%">
+  </div>
+</div>
+
+<div id="s1" class="modal">
+  
+  <form class="modal-content animate" action="login.php" method="post">
+   
+	<div class="container">
+      <label><b>Email-ID</b></label>
+      <input type="text" placeholder="Enter Email-ID" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+      <button id="lb" value="Login" style="border: none;
+    background-color: #6600cc;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;">Login</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button onclick="document.getElementById('s1').style.display='none'" style=" width: auto;
+    padding: 10px 18px;
+    background-color: #f44336; border:none; color: white;" id="lb">Cancel</button>
+    </div>
+  </form>
+</div>
+
+
+
+
+<div id="s2" class="modal">
+  
+  <form class="modal-content animate" action="fork.php" method="post">
+   
+	<div class="container">
+      <label><b>Tell me your needs...</b></label><br>
+      <label><input type="radio" name="in" value="PWOF">I need cool roomates and a flat to live in...(Person without flat)<br></label>
+	<label><input type="radio" name="in" value="PWF">I'd like to share the amazing flat I have...(Person with flat)<br></label>  
+      <button id="lb" style="border: none;
+    background-color: #6600cc;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;">Go Ahead!</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('s2').style.display='none'" style=" width: auto;
+    padding: 10px 18px;
+    background-color: #f44336; border:none; color: white;"  id="lb">Cancel</button>
+    </div>
+  </form>
+</div>
+
+</div>
+
+<footer>
+	<div id="f1">
+	<p>&copy Room Share 2017</p>
+	<p>Email us at <a href="mail to:room@share.com">room@share.com</a></p>
+	<p>Or call us at +<u style="color: blue;">91 9975264711</u></p>
+	</div>
+
+	<div id="f2">
+	
+	<h3>Developers</h3>
+
+	<span style="text-align: left;padding: 0 20px;">Tejas Chuttar (306043)</span>
+	<span style="text-align: center;padding: 0 20px;">Dhanur Sharma (306078)</span>
+	<span style="text-align: right;padding: 0 20px;">Yash Kondawar (306061)</span>
+
+	</div>
+
+
+</footer>
+</body>
+
+
+
+<script>
+var modal1 = document.getElementById('s1');
+
+window.onclick = function(event) 
+{
+    if (event.target == modal1) 
+    {
+        modal1.style.display = "none";
+    }
+}
+</script>
+
+<script>
+var modal2 = document.getElementById('s2');
+window.onclick = function(event) 
+{
+    if (event.target == modal2) 
+    {
+        modal2.style.display = "none";
+    }
+}
+</script>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 3000);
+}
+</script>
+</html>

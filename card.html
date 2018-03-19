@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="edpwof.css">
+	  <style type="text/css">
+    body
+    {
+      background-size: cover;
+    }
+    input[type=checkbox]
+    {
+    	transform: scale(1.3,1.3);
+    	margin-right: 10px;
+    }
+  </style>
+</head>
+<body background="pwofb.jpg">
+	<header style="padding: 4px 0;opacity:0.7;"><center><h1>ROOM SHARE</h1></center></header>
+
+<div class="topnav" id="myTopnav">
+  <a href="card.html">Home</a>
+  <a href="likepwof.php">Liked</a>
+  <a href="refer.html">Referals</a>
+  <a href="pwofed.php">Edit</a>
+  <a href="match.php">Matched Profiles</a>
+  <a href="logout.php" style="float: right;">Logout</a>
+</div>
+
+
+<div class="filters" style="background-color: #fff;color:#000; margin:2% auto 0 auto; width: 60%;padding: 2% 5% 2% 5%; opacity: 0.85;">
+
+<form action="cardd.php" method="post">
+<h3>Enter the gender and budget :</h3>
+	<center>
+	<select id="a" name="dsex" required>
+	  <option value=""> - Sex - </option>
+	  <option value="Male">Male</option>
+	  <option value="Female">Female</option>		
+	  <option value="Transgender">Transgender</option>
+	  <option value="Both">Both</option>
+
+	</select>
+
+	<select name="dbudget" required>
+	<option value=""> - Budget -</option>
+
+	<option value="5000">less than 5000</option>
+	<option value="10000">less than 10000</option>
+
+	<option value="15000">less than 15000</option>
+	<option value="20000">less than 20000</option>
+	</select>
+
+	<select name="darea" required>
+	<option value=""> - Area -</option>
+	<option value="Kothrud">Kothrud</option>
+	<option value="Pimpri">Pimpri</option>
+	<option value="Chinchwad">Chinchwad</option>
+	<option value="Aundh">Aundh</option>
+	<option value="Vimannagar">Vimannagar</option>	
+	</select><br><br>
+	</center>	
+
+<h4>Choose your kind of Roommate :</h4><br>
+	
+	<input type="checkbox" title="Check if critical" name="smoking">Smoking
+	<select name="dsmoking" required>
+	  <option value=""> - Smoking - </option>
+	  <option value="Yes">Yes</option>
+	  <option value="No">No</option>
+	  <option value="Occasionally">Occasionally</option>		
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="drinking">Drinking
+	<select name="ddrinking" required>
+	  <option value=""> - Drinking - </option>
+	  <option value="Yes">Yes</option>
+	  <option value="No">No</option>
+	  <option value="Occasionally">Occasionally</option>		
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="travel">Mode Of Transport
+	<select name="dtravel" required>
+	  <option value=""> - Select - </option>
+	  <option value="Own Vehicle">Has Own Vehicle</option>
+	  <option value="Public Transport">Uses Public Transport</option>
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="occupation">Occupation
+	<select name="doccu" required>
+	  <option value=""> - Occupation - </option>
+	  <option value="Studying">Student</option>
+	  <option value="Working">Working</option>
+	</select><br><br>
+	
+	<input type="checkbox" title="Check if critical" name="eat">Eating Preferences
+	<select name="deat" required>
+	  <option value=""> - Select - </option>
+	  <option value="Veg">Pure Veg</option>
+	  <option value="Non-Veg">Non-Veg</option>
+	  <option value="Both Veg and Non-Veg">Both</option>
+				
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="foodarr">Eating Arrangements
+	<select name="deata" required>
+	  <option value=""> - Select - </option>
+	  <option value="Cook">Cook</option>
+	  <option value="Mess">Mess</option>
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="sleep">Sleeping habits
+	<select name="dsleeph" required>
+	  <option value=""> - Sleeping Habits - </option>
+	  <option value="Day person">Day person</option>
+	  <option value="Night person">Night person</option>
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="parties">Parties
+	<select name="dparty" required>
+	  <option value=""> - Parties - </option>
+	  <option value="Yes">Yes</option>
+	  <option value="No">No</option>
+		<option value="Occasionally">Occasionally</option>
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="caste">Caste
+	<select name="dcaste" required>
+	<option value=""> - Caste -</option>
+	<option value="Hindu">Hindu</option>
+	<option value="Muslim">Muslim</option>
+	<option value="Christian">Christian</option>
+	<option value="Jain">Jain</option>
+	<option value="Buddhist">Buddhist</option>	
+	</select><br><br>
+
+	<input type="checkbox" title="Check if critical" name="visitors">Visitors
+	<select name="dvisit" required>
+	  <option value=""> - Visitors - </option>
+	  <option value="Male">Male</option>
+	  <option value="Female">Female</option>
+		<option value="Both male and female">Both</option>
+		<option value="Only relatives">Only relatives</option>
+		<option value="None">None</option>
+	</select><br><br>
+
+<input id="sub" type="submit" value="Find Room Buddies">
+
+</div>
+
+</form>
+</body>
+</html> 
